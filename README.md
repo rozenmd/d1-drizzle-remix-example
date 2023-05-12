@@ -28,4 +28,4 @@ Configure the "Build command" should be set to `npm run build`, and the "Build o
 3. Add the newly created D1 database UUID to `wrangler.toml`
 4. `npm run migrations:apply`
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/workers-sdk/tree/rozenmd/drizzle-remix-template/templates/pages-remix-drizzle-d1)
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/rozenmd/d1-drizzle-remix-example)
