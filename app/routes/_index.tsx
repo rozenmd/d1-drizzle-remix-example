@@ -1,7 +1,7 @@
 import { useLoaderData } from "@remix-run/react";
 import { json } from "@remix-run/cloudflare";
 
-import type { LoaderFunction, LoaderFunctionArgs } from "@remix-run/cloudflare";
+import type { LoaderFunctionArgs } from "@remix-run/cloudflare";
 import type { InferSelectModel } from "drizzle-orm";
 
 import { client } from "~/db/client.server";
