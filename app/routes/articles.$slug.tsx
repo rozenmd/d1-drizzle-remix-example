@@ -43,9 +43,7 @@ const Article = () => {
       {article ? (
         <main>
           <h1>{article.title}</h1>
-          <p>
-            Published: {new Date(article.published_on).toLocaleDateString()}
-          </p>
+          <p>Published: {new Date(article.publishedOn).toLocaleDateString()}</p>
           <Markdown content={data.article.content} />
         </main>
       ) : (
