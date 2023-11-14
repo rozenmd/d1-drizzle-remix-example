@@ -1,5 +1,5 @@
 [[d1_databases]]
 binding = "DB" # i.e. available in your Worker on env.DB
 database_name = "blog"
-database_id = "3ec08cb6-c8ad-4b89-9113-20c7cad364b7"
+database_id = "655e21a7-d6f4-45c4-abdd-46c27591f22a"
 preview_database_id = "DB"
