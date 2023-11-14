@@ -26,6 +26,11 @@ Configure the "Build command" should be set to `npm run build`, and the "Build o
 1. `npm install`
 2. `npm run d1:new`
 3. Add the newly created D1 database UUID to `wrangler.toml`
-4. `npm run migrations:apply`
+4. `npm run d1:init`
+
+With the D1 database initialised on Cloudflare, and configured in your wrangler.toml, you can also develop on a local d1 database (after running the above steps):
+
+1. `npm run local:d1:init`
+2. `npm run dev`
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/rozenmd/d1-drizzle-remix-example)

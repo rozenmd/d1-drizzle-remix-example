@@ -9,18 +9,18 @@
     "typecheck": "tsc",
     "migrations:gen": "drizzle-kit generate:sqlite",
     "migrations:up": "drizzle-kit up:sqlite",
-    "local:migrations:apply": "NO_D1_WARNING=true wrangler d1 migrations apply blog --local",
-    "local:d1:load": "NO_D1_WARNING=true wrangler d1 execute blog --file='./fixtures/data.sql' --local",
-    "migrations:apply": "NO_D1_WARNING=true wrangler d1 migrations apply blog --experimental",
-    "d1:new": "NO_D1_WARNING=true wrangler d1 create blog --experimental",
-    "d1:load": "NO_D1_WARNING=true wrangler d1 execute blog --file='./fixtures/data.sql'"
+    "local:migrations:apply": "wrangler d1 migrations apply blog --local",
+    "local:d1:init": "npm run local:migrations:apply && wrangler d1 execute blog --file='./fixtures/data.sql' --local",
+    "migrations:apply": "wrangler d1 migrations apply blog",
+    "d1:new": "wrangler d1 create blog",
+    "d1:init": "npm run migrations:apply && wrangler d1 execute blog --file='./fixtures/data.sql'"
   },
   "dependencies": {
     "@markdoc/markdoc": "^0.3.2",
-    "@remix-run/cloudflare": "^2.0.0",
-    "@remix-run/cloudflare-pages": "^2.0.0",
-    "@remix-run/css-bundle": "^2.0.0",
-    "@remix-run/react": "^2.0.0",
+    "@remix-run/cloudflare": "^2.2.0",
+    "@remix-run/cloudflare-pages": "^2.2.0",
+    "@remix-run/css-bundle": "^2.2.0",
+    "@remix-run/react": "^2.2.0",
     "cross-env": "^7.0.3",
     "drizzle-orm": "^0.28.6",
     "isbot": "^3.6.13",
@@ -30,15 +30,15 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.0.0",
-    "@remix-run/dev": "^2.0.0",
-    "@remix-run/eslint-config": "^2.0.0",
+    "@remix-run/dev": "^2.2.0",
+    "@remix-run/eslint-config": "^2.2.0",
     "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
     "drizzle-kit": "^0.19.13",
     "eslint": "^8.49.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.2.2",
-    "wrangler": "^3.8.0"
+    "wrangler": "^3.15.0"
   },
   "engines": {
     "node": ">=18.0.0"
