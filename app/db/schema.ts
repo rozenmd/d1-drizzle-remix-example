@@ -14,10 +14,10 @@ export const articles = sqliteTable(
     excerpt: text("excerpt"),
     content: text("content"),
     author: text("author"),
-    publishedOn: integer("published_on").notNull(), //{ mode: "timestamp" } is broken
+    publishedOn: integer("published_on").notNull(),
     createdAt: integer("created_at")
       .notNull()
-      .default(sql`CURRENT_TIMESTAMP`), //{ mode: "timestamp" } is broken
+      .default(sql`CURRENT_TIMESTAMP`),
   },
   (articles) => ({
     slugIdx: uniqueIndex("slugIdx").on(articles.slug),
