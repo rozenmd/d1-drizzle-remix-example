@@ -3,12 +3,12 @@ import { json } from "@remix-run/cloudflare";
 import invariant from "tiny-invariant";
 import { eq } from "drizzle-orm";
 
-import type { LoaderFunction, LoaderFunctionArgs } from "@remix-run/cloudflare";
-import type { InferSelectModel } from "drizzle-orm";
-
 import { Markdown } from "~/components/Markdown";
 import { client } from "~/db/client.server";
 import { articles } from "~/db/schema";
+
+import type { LoaderFunctionArgs } from "@remix-run/cloudflare";
+import type { InferSelectModel } from "drizzle-orm";
 
 export type Article = InferSelectModel<typeof articles>; // return type when queried
 

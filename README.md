@@ -1,6 +1,10 @@
-# Welcome to Remix!
+# Cloudflare D1, Remix, and Drizzle
 
+This repo is an example for using Cloudflare D1, Remix, and Drizzle together. You can see a live demo [here](https://d1-drizzle-remix-example.pages.dev/).
+
+- [Cloudflare D1 Docs](https://developers.cloudflare.com/d1/)
 - [Remix Docs](https://remix.run/docs)
+- [Drizzle Docs](https://orm.drizzle.team/docs/quick-sqlite/d1)
 
 ## Development
 
