@@ -7,7 +7,7 @@ import { Markdown } from "~/components/Markdown";
 import { db } from "~/db/client.server";
 import { articles } from "~/db/schema";
 
-import type { LoaderFunction, LoaderFunctionArgs } from "@remix-run/cloudflare";
+import type { LoaderFunctionArgs } from "@remix-run/cloudflare";
 import type { InferSelectModel } from "drizzle-orm";
 import type { Env } from "~/types";
 
