@@ -1,3 +1,4 @@
+import { sql } from "drizzle-orm";
 import {
   sqliteTable,
   text,
@@ -13,8 +14,10 @@ export const articles = sqliteTable(
     excerpt: text("excerpt"),
     content: text("content"),
     author: text("author"),
-    published_on: integer("published_on"), //{ mode: "timestamp" } is broken
-    createdAt: integer("created_at"), //{ mode: "timestamp" } is broken
+    publishedOn: integer("published_on").notNull(), //{ mode: "timestamp" } is broken
+    createdAt: integer("created_at")
+      .notNull()
+      .default(sql`CURRENT_TIMESTAMP`), //{ mode: "timestamp" } is broken
   },
   (articles) => ({
     slugIdx: uniqueIndex("slugIdx").on(articles.slug),

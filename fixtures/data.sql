@@ -6,8 +6,7 @@ INSERT INTO
         `excerpt`,
         `content`,
         `author`,
-        `published_on`,
-        `created_at`
+        `published_on`
     )
 VALUES
     (
@@ -16,7 +15,6 @@ VALUES
         'Earth''s mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.',
         'Earth''s mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.',
         'Joss Whedon',
-        1683881290275,
         1683881290275
     );
 
@@ -27,8 +25,7 @@ INSERT INTO
         `excerpt`,
         `content`,
         `author`,
-        `published_on`,
-        `created_at`
+        `published_on`
     )
 VALUES
     (
@@ -37,7 +34,6 @@ VALUES
         'When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it''s up to Earth''s mightiest heroes to stop the villainous Ultron from enacting his terrible plan.',
         'When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it''s up to Earth''s mightiest heroes to stop the villainous Ultron from enacting his terrible plan.',
         'Joss Whedon',
-        1683881290275,
         1683881290275
     );
 
@@ -48,8 +44,7 @@ INSERT INTO
         `excerpt`,
         `content`,
         `author`,
-        `published_on`,
-        `created_at`
+        `published_on`
     )
 VALUES
     (
@@ -58,7 +53,6 @@ VALUES
         'The plot is unknown.',
         'The plot is unknown.',
         'Joss Whedon',
-        1683881290275,
         1683881290275
     );
 
@@ -69,8 +63,7 @@ INSERT INTO
         `excerpt`,
         `content`,
         `author`,
-        `published_on`,
-        `created_at`
+        `published_on`
     )
 VALUES
     (
@@ -79,7 +72,6 @@ VALUES
         'The plot is unknown.',
         'The plot is unknown.',
         'Joss Whedon',
-        1683881290275,
         1683881290275
     );
 
@@ -90,8 +82,7 @@ INSERT INTO
         `excerpt`,
         `content`,
         `author`,
-        `published_on`,
-        `created_at`
+        `published_on`
     )
 VALUES
     (
@@ -100,7 +91,6 @@ VALUES
         'The plot is unknown.',
         'The plot is unknown.',
         'Joss Whedon',
-        1683881290275,
         1683881290275
     );
 
@@ -111,8 +101,7 @@ INSERT INTO
         `excerpt`,
         `content`,
         `author`,
-        `published_on`,
-        `created_at`
+        `published_on`
     )
 VALUES
     (
@@ -121,7 +110,6 @@ VALUES
         'The plot is unknown.',
         'The plot is unknown.',
         'Joss Whedon',
-        1683881290275,
         1683881290275
     );
 
@@ -132,8 +120,7 @@ INSERT INTO
         `excerpt`,
         `content`,
         `author`,
-        `published_on`,
-        `created_at`
+        `published_on`
     )
 VALUES
     (
@@ -142,7 +129,6 @@ VALUES
         'The plot is unknown.',
         'The plot is unknown.',
         'Joss Whedon',
-        1683881290275,
         1683881290275
     );
 
@@ -153,8 +139,7 @@ INSERT INTO
         `excerpt`,
         `content`,
         `author`,
-        `published_on`,
-        `created_at`
+        `published_on`
     )
 VALUES
     (
@@ -163,7 +148,6 @@ VALUES
         'The plot is unknown.',
         'The plot is unknown.',
         'Joss Whedon',
-        1683881290275,
         1683881290275
     );
 
@@ -174,8 +158,7 @@ INSERT INTO
         `excerpt`,
         `content`,
         `author`,
-        `published_on`,
-        `created_at`
+        `published_on`
     )
 VALUES
     (
@@ -184,7 +167,6 @@ VALUES
         'The plot is unknown.',
         'The plot is unknown.',
         'Joss Whedon',
-        1683881290275,
         1683881290275
     );
 
@@ -195,8 +177,7 @@ INSERT INTO
         `excerpt`,
         `content`,
         `author`,
-        `published_on`,
-        `created_at`
+        `published_on`
     )
 VALUES
     (
@@ -205,6 +186,5 @@ VALUES
         'The plot is unknown.',
         'The plot is unknown.',
         'Joss Whedon',
-        1683881290275,
         1683881290275
     );

@@ -4,8 +4,8 @@ CREATE TABLE `articles` (
 	`excerpt` text,
 	`content` text,
 	`author` text,
-	`published_on` integer,
-	`created_at` integer
+	`published_on` integer NOT NULL,
+	`created_at` integer DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
 
 CREATE UNIQUE INDEX `slugIdx` ON `articles` (`slug`);

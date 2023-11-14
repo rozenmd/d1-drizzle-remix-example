@@ -1,16 +1,17 @@
 import { useLoaderData } from "@remix-run/react";
 import { json } from "@remix-run/cloudflare";
 
-import type { LoaderFunction } from "@remix-run/cloudflare";
-import type { InferModel } from "drizzle-orm";
+import type { LoaderFunctionArgs } from "@remix-run/cloudflare";
+import type { InferSelectModel } from "drizzle-orm";
 
 import { client } from "~/db/client.server";
 import { articles } from "~/db/schema";
 
-export type Article = InferModel<typeof articles>; // return type when queried
+export type Article = InferSelectModel<typeof articles>; // return type when queried
+export type QueriedArticle = Pick<Article, "slug" | "excerpt" | "title">;
 
-export const loader: LoaderFunction = async ({ context }) => {
-  const allArticles = await client(context.DB)
+export const loader = async ({ context }: LoaderFunctionArgs) => {
+  const allArticles = await client(context.env.DB)
     .select({
       slug: articles.slug,
       excerpt: articles.excerpt,
@@ -27,7 +28,7 @@ export const loader: LoaderFunction = async ({ context }) => {
 
   return json({ articles: allArticles });
 };
-type LoaderType = Awaited<ReturnType<typeof loader>>;
+type LoaderType = typeof loader;
 
 const Articles = () => {
   const data = useLoaderData<LoaderType>();
@@ -40,7 +41,7 @@ const Articles = () => {
         <main>
           <h1>Articles</h1>
           <div>
-            {articles.map((article: Article) => (
+            {articles.map((article: QueriedArticle) => (
               <div key={article.slug}>
                 <a href={`/articles/${article.slug}`}>{article.title}</a>
                 <p>{article.excerpt}</p>
