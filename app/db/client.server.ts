@@ -1,3 +1,3 @@
 import { drizzle } from "drizzle-orm/d1";
 
-export const client = (database: any) => drizzle(database);
+export const db = (database: D1Database) => drizzle(database);

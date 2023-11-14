@@ -4,18 +4,19 @@ import invariant from "tiny-invariant";
 import { eq } from "drizzle-orm";
 
 import { Markdown } from "~/components/Markdown";
-import { client } from "~/db/client.server";
+import { db } from "~/db/client.server";
 import { articles } from "~/db/schema";
 
-import type { LoaderFunctionArgs } from "@remix-run/cloudflare";
+import type { LoaderFunction, LoaderFunctionArgs } from "@remix-run/cloudflare";
 import type { InferSelectModel } from "drizzle-orm";
+import type { Env } from "~/types";
 
 export type Article = InferSelectModel<typeof articles>; // return type when queried
 
 export const loader = async ({ context, params }: LoaderFunctionArgs) => {
   invariant(params.slug, "slug not provided!");
 
-  const article = await client(context.env.DB)
+  const article = await db((context.env as Env).DB)
     .select()
     .from(articles)
     .where(eq(articles.slug, params.slug))
@@ -30,10 +31,9 @@ export const loader = async ({ context, params }: LoaderFunctionArgs) => {
 
   return json({ article });
 };
-type LoaderType = typeof loader;
 
 const Article = () => {
-  const data = useLoaderData<LoaderType>();
+  const data = useLoaderData<typeof loader>();
 
   const { article } = data;
 
